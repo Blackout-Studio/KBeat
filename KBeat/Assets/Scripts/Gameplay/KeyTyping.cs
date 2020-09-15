@@ -7,27 +7,20 @@ using System;
 public class KeyTyping : MonoBehaviour
 {
 
-    private int[] values;
-    private bool[] keys;
-
-    void Awake()
-    {
-        values = (int[])System.Enum.GetValues(typeof(KeyCode));
-        keys = new bool[values.Length];
-    }
+    private readonly Array keyCodes = Enum.GetValues(typeof(KeyCode));
 
     void Update()
     {
-        if (Input.anyKeyDown()) {
-            for (int i = 0; i < values.Length; i++)
+        if (Input.anyKeyDown) {
+
+            foreach (KeyCode keyCode in keyCodes)
             {
-                keys[i] = Input.GetKey((KeyCode)values[i]);
+                if (Input.GetKey(keyCode))
+                {
+                    Debug.Log("KeyCode down: " + keyCode + " current time: " + Time.time * 1000);
+                    break;
+                }
             }
         }
-    }
-
-    void checkForKey() 
-    {
-    
     }
 }
