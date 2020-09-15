@@ -1,9 +1,16 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using System.Threading;
+
+//Autor - Matyáš Himmer
 
 public class BPMTimer : MonoBehaviour
 {
-   public void startCalculating()
+
+    public StartSpawning other;
+
+    public void StartCalculating()
     {
 
         Song song = new Song(120.00f);
@@ -13,8 +20,9 @@ public class BPMTimer : MonoBehaviour
 
         for (int i = 0; i <= song.bpm; i++)
         {
-            Debug.Log("tik");
 
+            other.spawnOnBeat();
+            Debug.Log("Tik");
             Thread.Sleep((int)sleepTime);
         }
     }
