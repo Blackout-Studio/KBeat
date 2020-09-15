@@ -4,8 +4,7 @@ using UnityEngine;
 using System.Threading;
 
 //Autor - Matyáš Himmer
-
-public class BPMTimer : MonoBehaviour
+public class BPMController : MonoBehaviour
 {
 
     public StartSpawning other;
