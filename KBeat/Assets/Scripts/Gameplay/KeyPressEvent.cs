@@ -11,9 +11,10 @@ public class KeyPressEvent : MonoBehaviour
 
     public void keyPressed(KeyCode kcode)
     {
+        double time = Time.time * 1000;
         foreach (Note n in notes) 
         {
-            n.isPressed(kcode, Time.time * 1000);
+            n.isPressed(kcode, time);
         }
     }
 
