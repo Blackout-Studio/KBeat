@@ -306,11 +306,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songs:
-  - bpm: 0
-    clip: {fileID: 0}
-    name: 
-    volume: 0
-    pitch: 0.1
+  - bpm: 79
+    clip: {fileID: 8300000, guid: 25e24f41cb51d4d4e9b945f1979a77ba, type: 3}
+    name: Cradles
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - bpm: 107
+    clip: {fileID: 8300000, guid: 9ba84a0f68a1342459b2e03f43f7aa13, type: 3}
+    name: ComeOnEileen
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - bpm: 128
+    clip: {fileID: 8300000, guid: 59531e48dc322450ca4af6723d4f991a, type: 3}
+    name: HeroesTonight
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - bpm: 99
+    clip: {fileID: 8300000, guid: 0a29c95972fb7439e870c38a9472cc50, type: 3}
+    name: IWantItThatWay
+    volume: 1
+    pitch: 1
     source: {fileID: 0}
 --- !u!4 &758395158
 Transform:
@@ -355,7 +373,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 25e24f41cb51d4d4e9b945f1979a77ba, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
