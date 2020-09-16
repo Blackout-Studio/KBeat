@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Autor - Matyáš Himmer
+
 public class StartSpawning : MonoBehaviour
 {
 
@@ -11,8 +13,8 @@ public class StartSpawning : MonoBehaviour
 
     public void spawnOnBeat()
     {
-        
-        Instantiate(cube);
+
+        FindObjectOfType<AudioManager>().Play("Cradles");
         
     }
 
