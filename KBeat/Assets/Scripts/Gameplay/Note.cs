@@ -21,9 +21,17 @@ public class Note : MonoBehaviour
 
     public void isPressed(KeyCode kcode, double millis) 
     {
-        if (millis-time < cooldown && key == kcode) 
+        if (millis-time < cooldown && key == kcode && millis-time > 0) 
         {
             Debug.Log("Note was sucessfully hit");
+        } else if (millis-time < 0)
+        {
+            destroy(0);
         }
+    }
+
+    public void destroy(int acc)
+    {
+
     }
 }
