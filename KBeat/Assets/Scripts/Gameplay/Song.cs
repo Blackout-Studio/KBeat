@@ -4,7 +4,6 @@ using UnityEngine.Audio;
 using UnityEngine;
 
 //Autor - Matyáš Himmer
-
 [System.Serializable]
 public class Song {
 
