@@ -32,7 +32,7 @@ public class FadeInEffect : MonoBehaviour
             for (float i = 1; i >= 0; i -= Time.deltaTime)
             {
                 BlackImage.color = new Color(0, 0, 0, i);
-                yield return new WaitForSeconds(0.005f);
+                yield return new WaitForSeconds(0.01f);
             }
         }
     }
