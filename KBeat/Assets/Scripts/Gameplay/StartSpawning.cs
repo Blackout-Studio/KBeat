@@ -14,7 +14,7 @@ public class StartSpawning : MonoBehaviour
     public void spawnOnBeat()
     {
 
-        FindObjectOfType<AudioManager>().Play("Cradles");
+        //spawn the object
         
     }
 
