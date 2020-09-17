@@ -20,7 +20,7 @@ public class LevelLoaded : MonoBehaviour
     private IEnumerator StartPlaying()
     {
         yield return new WaitForSeconds(2);
-        FindObjectOfType<AudioManager>().Play("Cradles");
+        FindObjectOfType<BPMController>().start();
     }
 
 
