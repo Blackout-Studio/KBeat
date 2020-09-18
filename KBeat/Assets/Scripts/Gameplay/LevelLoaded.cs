@@ -7,11 +7,12 @@ using UnityEngine;
 public class LevelLoaded : MonoBehaviour
 {
 
-   
+    public BPMController bpmcontrol;
 
 
     void Start()
     {
+        
 
         StartCoroutine(StartPlaying());
         
@@ -20,7 +21,8 @@ public class LevelLoaded : MonoBehaviour
     private IEnumerator StartPlaying()
     {
         yield return new WaitForSeconds(2);
-        FindObjectOfType<BPMController>().start();
+        Start();
+        //FindObjectOfType<AudioManager>().Play("Cradles");
     }
 
 
