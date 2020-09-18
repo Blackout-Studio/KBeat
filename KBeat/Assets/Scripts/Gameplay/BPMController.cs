@@ -6,37 +6,48 @@ using System.Threading;
 //Autor - Matyáš Himmer
 public class BPMController : MonoBehaviour
 {
+    public AudioManager amanager;
+    public StartSpawning spawnStart;
 
-    
-
-    public void start()
+    public void Start()
     {
+        
 
-        Song[] songs = FindObjectOfType<AudioManager>().songs;
+        Song[] songs = amanager.songs;
 
-        Song pickedSong = songs[0];
+        Song pickedSong = songs[3];
 
         float BPS = 60.00f / pickedSong.bpm; // kolik sekund na jeden beat
         float sleepTime = BPS;
 
 
-        StartCoroutine(Beats(sleepTime, pickedSong));
+        StartCoroutine(Beats(sleepTime, pickedSong, BPS));
     }
 
 
     
 
-    private IEnumerator Beats(float sleepTime, Song pickedSong)
+    private IEnumerator Beats(float sleepTime, Song pickedSong, float BPS)
     {
         yield return new WaitForSeconds(3);
 
-        FindObjectOfType<AudioManager>().Play("Cradles");
+        amanager.Play(pickedSong.name);
 
         for (int i = 0; i <= pickedSong.bpm; i++)
         {
+            float randomNum = Random.Range( 0.0f,  10.0f);
 
-            FindObjectOfType<StartSpawning>().spawnOnBeat();
-            Debug.Log("Tik");
+            sleepTime = BPS;
+
+            if (randomNum <= 5.0f)
+            {
+                sleepTime *= 1.0f;
+            } else
+            {
+                sleepTime *= 2.0f;
+            }
+            spawnStart.spawnOnBeat();
+            //print(sleepTime);
             yield return new WaitForSeconds(sleepTime);
         }
     }

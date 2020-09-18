@@ -7,15 +7,16 @@ using UnityEngine;
 public class StartSpawning : MonoBehaviour
 {
 
-    public GameObject cube;
+    //public GameObject cube;
 
     
 
-    public void spawnOnBeat()
+    public void spawnOnBeat(// Time.deltaTime timeOfSpawn
+        )
     {
-
+        Debug.Log("Tik");
         //spawn the object
-        
+
     }
 
    
