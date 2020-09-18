@@ -35,6 +35,7 @@ public class FadeInEffect : MonoBehaviour
                 BlackImage.color = new Color(0, 0, 0, i);
                 yield return new WaitForSeconds(0.01f);
             }
+            BlackImage.enabled = false;
         }
     }
 }
