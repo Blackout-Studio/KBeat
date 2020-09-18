@@ -6,16 +6,18 @@ using UnityEngine.UI;
 public class CreditsScreenHandler : MonoBehaviour
 {
     public Text CreditsText;
+    public TextAsset CreditsFile;
     public bool Sliding = false;
     float speed = 0.8f;
 
     // Start is called before the first frame update
     void Start()
     {
-        var Credits = "KBeat\nBlackout Studio 2020\n";
-        Credits += "hey\n";
-        Credits += "lool\n";
-        CreditsText.text = Credits;
+        //var Credits = "KBeat\nBlackout Studio 2020\n";
+        //Credits += "hey\n";
+        //Credits += "lool\n";
+        //CreditsText.text = Credits;
+        CreditsText.text = CreditsFile.text;
         StartSliding();
     }
 
