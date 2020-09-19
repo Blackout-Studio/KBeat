@@ -316,52 +316,28 @@ MonoBehaviour:
   - bpm: 107
     clip: {fileID: 8300000, guid: 9ba84a0f68a1342459b2e03f43f7aa13, type: 3}
     name: ComeOnEileen
-<<<<<<< Updated upstream
     reactionTime: 2
-=======
-<<<<<<< HEAD
-    reactionTime: 1
-=======
-    reactionTime: 2
->>>>>>> 3f19c60390e47447a8c610784dadb2a4c7c9b7c5
->>>>>>> Stashed changes
     volume: 0.2
     pitch: 1
     source: {fileID: 0}
   - bpm: 128
     clip: {fileID: 8300000, guid: 59531e48dc322450ca4af6723d4f991a, type: 3}
     name: HeroesTonight
-<<<<<<< Updated upstream
     reactionTime: 2
-=======
-<<<<<<< HEAD
-    reactionTime: 1
-=======
-    reactionTime: 2
->>>>>>> 3f19c60390e47447a8c610784dadb2a4c7c9b7c5
->>>>>>> Stashed changes
     volume: 0.2
     pitch: 1
     source: {fileID: 0}
   - bpm: 99
     clip: {fileID: 8300000, guid: 0a29c95972fb7439e870c38a9472cc50, type: 3}
     name: IWantItThatWay
-<<<<<<< Updated upstream
     reactionTime: 2
-=======
-<<<<<<< HEAD
-    reactionTime: 1
-=======
-    reactionTime: 2
->>>>>>> 3f19c60390e47447a8c610784dadb2a4c7c9b7c5
->>>>>>> Stashed changes
     volume: 0.034
     pitch: 1
     source: {fileID: 0}
   - bpm: 240
     clip: {fileID: 8300000, guid: f832eeebb2385064aa2cd36e776691b8, type: 3}
     name: Los!Los!Los!
-    reactionTime: 2
+    reactionTime: 4
     volume: 0.005
     pitch: 1
     source: {fileID: 0}
