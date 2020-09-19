@@ -15,11 +15,11 @@ public class CreditsScreenHandler : MonoBehaviour
 
     public bool Sliding = false;
     float speed = 0.8f; 
-
     public void FadeIn()
     {
         StartCoroutine(FadeImage(true));
     }
+
 
     public void FadeOut()
     {
@@ -75,7 +75,6 @@ public class CreditsScreenHandler : MonoBehaviour
         {
             for (float i = 0; i <= 3; i += Time.deltaTime)
             {
-                Debug.Log(i);
                 BlackImage.color = new Color(0, 0, 0, i);
                 yield return new WaitForSeconds(0.009f);
             }
