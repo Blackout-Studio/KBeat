@@ -33,6 +33,7 @@ public class CreditsScreenHandler : MonoBehaviour
         BlackImage.color = new Color(0, 0, 0, 0);
         BlackImage.enabled = true;
         FadeIn();
+        StartCoroutine(StopSliding());
         Debug.Log(CreditsText.transform.position.y);
     }
 
@@ -56,11 +57,11 @@ public class CreditsScreenHandler : MonoBehaviour
         pos.y += speed;
         CreditsText.transform.position = pos;
         
-        if (CreditsText.transform.position.y > 2500)
-        {
-            Sliding = false;
-            FadeOut();
-        }
+        //if (CreditsText.transform.position.y > 2500)
+        //{
+          //  Sliding = false;
+          //  FadeOut();
+        //}
     }
 
     //Fade Function
@@ -96,5 +97,12 @@ public class CreditsScreenHandler : MonoBehaviour
             Vector3 temp = new Vector3(0, -140.7f, 0);
             CreditsText.transform.position = new Vector3(CreditsText.transform.position.x, -140.7f, CreditsText.transform.position.z);
         }
+    }
+
+    IEnumerator StopSliding()
+    {
+        yield return new WaitForSeconds(28);
+        Sliding = false;
+        FadeOut();
     }
 }
