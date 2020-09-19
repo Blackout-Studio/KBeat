@@ -25,6 +25,17 @@ public class CreditsScreenHandler : MonoBehaviour
         StartCoroutine(FadeOutImage(true));
     }
 
+    public void StartSliding()
+    {
+        Sliding = true;
+        string word = File.ReadAllText("Assets/Texts/Credits.txt");
+        CreditsText.text = word;
+        BlackImage.color = new Color(0, 0, 0, 0);
+        BlackImage.enabled = true;
+        FadeIn();
+        Debug.Log(CreditsText.transform.position.y);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,17 +43,8 @@ public class CreditsScreenHandler : MonoBehaviour
         //Credits += "hey\n";
         //Credits += "lool\n";
         //CreditsText.text = Credits;
-        string word = File.ReadAllText("Assets/Texts/Credits.txt");
-        CreditsText.text = word;
-        StartSliding();
-    }
+        //Debug.Log("Starting");
 
-    void StartSliding()
-    {
-        Sliding = true;
-        BlackImage.color = new Color(0, 0, 0, 0);
-        BlackImage.enabled = true;
-        FadeIn();
     }
 
     // Update is called once per frame
@@ -74,7 +76,6 @@ public class CreditsScreenHandler : MonoBehaviour
                 BlackImage.color = new Color(0, 0, 0, i);
                 yield return new WaitForSeconds(0.009f);
             }
-            Debug.Log("Finished");            
         }
     }
 
@@ -91,7 +92,9 @@ public class CreditsScreenHandler : MonoBehaviour
             }
             BlackImage.enabled = false;
             CreditsFrame.SetActive(false);
-            CreditsText.transform.position = new Vector3(2.4f, -140.7f, 0);
+            Debug.Log(CreditsText.transform.position.y);
+            Vector3 temp = new Vector3(0, -140.7f, 0);
+            CreditsText.transform.position = new Vector3(CreditsText.transform.position.x, -140.7f, CreditsText.transform.position.z);
         }
     }
 }
