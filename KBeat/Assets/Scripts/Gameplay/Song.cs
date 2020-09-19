@@ -10,6 +10,7 @@ public class Song {
     public float bpm;
     public AudioClip clip;
     public string name;
+    public float length;
     [Min(1)]
     public int reactionTime;
 
