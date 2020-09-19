@@ -9,6 +9,7 @@ public class KeyPressEvent : MonoBehaviour
     public List<Note> notes = new List<Note>();
     private GameObject noteObj;
 
+    public ScoreManager scoreManager;
     public void keyPressed(KeyCode kcode)
     {
         double time = Time.time * 1000;
@@ -21,6 +22,7 @@ public class KeyPressEvent : MonoBehaviour
                 if(n.timeLeft > -0.15f && kcode == n.key)
                 {
                     Destroy(n.gameObject);
+                    scoreManager.addScore();
                     pressed = true;
                 }
             }
