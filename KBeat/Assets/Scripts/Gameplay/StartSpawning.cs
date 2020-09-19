@@ -16,6 +16,7 @@ public class StartSpawning : MonoBehaviour
         int key = Random.Range(0, c.Length);
         //KeyCode kc = (KeyCode)System.Enum.Parse(typeof(KeyCode), c[key].ToString());
         Note n = Instantiate(note,new Vector3(4,-1,-16), Quaternion.EulerAngles(90,0,0)).GetComponent<Note>();
+        
         n.Initialize(Time.time * 1000, cooldown, KeyCode.A);
         kpe.addNote(n);
     }

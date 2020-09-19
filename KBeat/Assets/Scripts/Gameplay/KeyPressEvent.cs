@@ -14,7 +14,7 @@ public class KeyPressEvent : MonoBehaviour
         double time = Time.time * 1000;
         foreach (Note n in notes) 
         {
-            n.isPressed(kcode, time);
+            //n.isPressed(kcode, time);
         }
     }
 
