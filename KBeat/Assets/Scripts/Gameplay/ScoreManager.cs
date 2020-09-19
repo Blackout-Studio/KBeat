@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Autor Matyáš Himmer
+
 public class ScoreManager : MonoBehaviour
 {
     public int score;

@@ -5,7 +5,7 @@ Game Created By:
 Back-End Programmers:
 
 Milan Savickij
-Maytáš Himmer
+Matyáš Himmer
 
 Front-End Programmers:
 
