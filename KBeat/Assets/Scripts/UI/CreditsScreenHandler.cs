@@ -101,7 +101,7 @@ public class CreditsScreenHandler : MonoBehaviour
 
     IEnumerator StopSliding()
     {
-        yield return new WaitForSeconds(28);
+        yield return new WaitForSeconds(35);
         Sliding = false;
         FadeOut();
     }
