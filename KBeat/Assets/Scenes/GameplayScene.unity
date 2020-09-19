@@ -309,28 +309,28 @@ MonoBehaviour:
   - bpm: 79
     clip: {fileID: 8300000, guid: 25e24f41cb51d4d4e9b945f1979a77ba, type: 3}
     name: Cradles
-    reactionTime: 0
+    reactionTime: 1
     volume: 0.2
     pitch: 1
     source: {fileID: 0}
   - bpm: 107
     clip: {fileID: 8300000, guid: 9ba84a0f68a1342459b2e03f43f7aa13, type: 3}
     name: ComeOnEileen
-    reactionTime: 0
+    reactionTime: 2
     volume: 0.2
     pitch: 1
     source: {fileID: 0}
   - bpm: 128
     clip: {fileID: 8300000, guid: 59531e48dc322450ca4af6723d4f991a, type: 3}
     name: HeroesTonight
-    reactionTime: 0
+    reactionTime: 2
     volume: 0.2
     pitch: 1
     source: {fileID: 0}
   - bpm: 99
     clip: {fileID: 8300000, guid: 0a29c95972fb7439e870c38a9472cc50, type: 3}
     name: IWantItThatWay
-    reactionTime: 0
+    reactionTime: 2
     volume: 0.034
     pitch: 1
     source: {fileID: 0}
@@ -341,7 +341,7 @@ MonoBehaviour:
     volume: 0.005
     pitch: 1
     source: {fileID: 0}
-  song: 4
+  song: 2
 --- !u!4 &758395158
 Transform:
   m_ObjectHideFlags: 0
