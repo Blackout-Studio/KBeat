@@ -11,16 +11,15 @@ public class KeyPressEvent : MonoBehaviour
 
     public void keyPressed(KeyCode kcode)
     {
-        /*double time = Time.time * 1000;
+        double time = Time.time * 1000;
         foreach (Note n in notes) 
         {
             n.isPressed(kcode, time);
-        }*/
+        }
     }
 
-    public void addNote() 
+    public void addNote(Note n) 
     {
-        /*Note note = new Note();
-        Instantiate(noteObj);*/
+        notes.Add(n);
     }
 }

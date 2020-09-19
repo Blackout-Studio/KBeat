@@ -8,7 +8,6 @@ public class BPMController : MonoBehaviour
 {
     public AudioManager amanager;
     public StartSpawning spawnStart;
-
     public void Start()
     {
         
@@ -18,6 +17,7 @@ public class BPMController : MonoBehaviour
         Song pickedSong = songs[3];
 
         float BPS = 60.00f / pickedSong.bpm; // kolik sekund na jeden beat
+        spawnStart.cooldown = (double)BPS;
         float sleepTime = BPS;
 
 
