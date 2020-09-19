@@ -28,9 +28,28 @@ public class AudioManager : MonoBehaviour
         s.source.Play();
     }
 
+    public void Stop (string name)
+    {
+        Song s = Array.Find(songs, song => song.name == name);
+
+        StartCoroutine(Stop(s));
+        
+    }
+
     void Start()
     {
         //Play("IWantItThatWay");
         
+    }
+
+    private IEnumerator Stop(Song s)
+    {
+        for (float i = s.source.volume; i >= 0; i -= 0.01f)
+        {
+            s.source.volume = i;
+            
+            yield return new WaitForSeconds(0.1f);
+        }
+        s.source.Stop();
     }
 }

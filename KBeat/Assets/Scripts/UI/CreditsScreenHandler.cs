@@ -11,6 +11,7 @@ public class CreditsScreenHandler : MonoBehaviour
     public Image BlackImage;
     public GameObject MainMenu;
     public GameObject CreditsFrame;
+    public AudioManager amanager;
 
     public bool Sliding = false;
     float speed = 0.8f; 
@@ -28,6 +29,7 @@ public class CreditsScreenHandler : MonoBehaviour
     public void StartSliding()
     {
         Sliding = true;
+        amanager.Play("EternalYouth");
         string word = File.ReadAllText("Assets/Texts/Credits.txt");
         CreditsText.text = word;
         BlackImage.color = new Color(0, 0, 0, 0);
@@ -104,5 +106,6 @@ public class CreditsScreenHandler : MonoBehaviour
         yield return new WaitForSeconds(28);
         Sliding = false;
         FadeOut();
+        amanager.Stop("EternalYouth");
     }
 }

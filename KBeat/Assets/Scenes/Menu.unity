@@ -1659,6 +1659,7 @@ MonoBehaviour:
   BlackImage: {fileID: 1910093317}
   MainMenu: {fileID: 855494976}
   CreditsFrame: {fileID: 337653082}
+  amanager: {fileID: 1442323193}
   Sliding: 0
 --- !u!1 &340563774
 GameObject:
@@ -3518,6 +3519,80 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1442323192
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1442323194}
+  - component: {fileID: 1442323193}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1442323193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442323192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 105ea3642adce4614a20f5eb79e3dcc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  songs:
+  - bpm: 79
+    clip: {fileID: 8300000, guid: 25e24f41cb51d4d4e9b945f1979a77ba, type: 3}
+    name: Cradles
+    volume: 0.2
+    pitch: 1
+    source: {fileID: 0}
+  - bpm: 107
+    clip: {fileID: 8300000, guid: 9ba84a0f68a1342459b2e03f43f7aa13, type: 3}
+    name: ComeOnEileen
+    volume: 0.2
+    pitch: 1
+    source: {fileID: 0}
+  - bpm: 128
+    clip: {fileID: 8300000, guid: 59531e48dc322450ca4af6723d4f991a, type: 3}
+    name: HeroesTonight
+    volume: 0.2
+    pitch: 1
+    source: {fileID: 0}
+  - bpm: 99
+    clip: {fileID: 8300000, guid: 0a29c95972fb7439e870c38a9472cc50, type: 3}
+    name: IWantItThatWay
+    volume: 0.2
+    pitch: 1
+    source: {fileID: 0}
+  - bpm: 120
+    clip: {fileID: 8300000, guid: 1ee9394f8a551486bae294a8516f659f, type: 3}
+    name: EternalYouth
+    volume: 0.2
+    pitch: 1
+    source: {fileID: 0}
+--- !u!4 &1442323194
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442323192}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.4971538, y: -0.10774231, z: 2.3814692}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1472344316
 GameObject:
   m_ObjectHideFlags: 0
