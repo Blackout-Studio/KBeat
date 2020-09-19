@@ -12,9 +12,18 @@ public class KeyPressEvent : MonoBehaviour
     public void keyPressed(KeyCode kcode)
     {
         double time = Time.time * 1000;
+        bool pressed = false;
         foreach (Note n in notes) 
         {
             //n.isPressed(kcode, time);
+            if(n != null && !pressed)
+            {
+                if(n.timeLeft > -0.15f && kcode == n.key)
+                {
+                    Destroy(n.gameObject);
+                    pressed = true;
+                }
+            }
         }
     }
 

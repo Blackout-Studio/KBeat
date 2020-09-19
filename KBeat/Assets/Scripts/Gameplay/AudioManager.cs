@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour
 {
 
     public Song[] songs;
+    public int song;
 
     void Awake()
     {

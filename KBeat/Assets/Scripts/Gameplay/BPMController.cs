@@ -9,20 +9,19 @@ public class BPMController : MonoBehaviour
     public AudioManager amanager;
     public StartSpawning spawnStart;
 
-    public float universalOffset;
-
+    private int reactionTime;
     public void Start()
     {
         
 
         Song[] songs = amanager.songs;
 
-        Song pickedSong = songs[3];
-        
+        Song pickedSong = songs[amanager.song];
+        reactionTime = pickedSong.reactionTime;
 
         float BPS = 60.00f / pickedSong.bpm; // kolik sekund na jeden beat
-        float sleepTime = BPS;
         spawnStart.cooldown = (double)BPS;
+        float sleepTime = BPS;
 
 
         StartCoroutine(Beats(sleepTime, pickedSong, BPS));
@@ -37,16 +36,11 @@ public class BPMController : MonoBehaviour
 
         amanager.Play(pickedSong.name);
 
-
-        yield return new WaitForSeconds(universalOffset);
-       // yield return new WaitForSeconds(BPS / 2.00f);
-
         for (int i = 0; i <= pickedSong.bpm; i++)
         {
             float randomNum = Random.Range( 0.0f,  10.0f);
 
             sleepTime = BPS;
-            
 
             if (randomNum <= 5.0f)
             {
@@ -54,9 +48,8 @@ public class BPMController : MonoBehaviour
             } else
             {
                 sleepTime *= 2.0f;
-
             }
-            spawnStart.spawnOnBeat();
+            spawnStart.spawnOnBeat(reactionTime);
             //print(sleepTime);
             yield return new WaitForSeconds(sleepTime);
         }

@@ -5,51 +5,26 @@ using UnityEngine;
 //Autor - Milan Savickij
 public class Note : MonoBehaviour
 {
-
-    private double time;
-    private double cooldown;
+    public double timeLeft;
     public KeyCode key;
     private float speed;
 
-    //public int order;
-
-    /*public Note(double time, double timeToHit, KeyCode kcode) 
+    public void Initialize(double timeToHit, KeyCode kcode, int reactionTime)
     {
-        this.time = time;
-        this.cooldown = timeToHit;
+        this.timeLeft = timeToHit*reactionTime;
         this.key = kcode;
-        speed = Mathf.Abs(this.gameObject.transform.position.z - 4)/(float)this.cooldown;
-    }
-*/
-    public void Initialize(double time, double timeToHit, KeyCode kcode)
-    {
-        this.time = time;
-        this.cooldown = timeToHit;
-        this.key = kcode;
-        speed = (float)Mathf.Abs(this.gameObject.transform.position.z - 4)/(float)this.cooldown;
+        speed = (float)Mathf.Abs(this.gameObject.transform.position.z - 4)/(float)this.timeLeft;
     }
     
     void Update()
     {
         this.transform.position += new Vector3(0,0, speed * Time.deltaTime);
-    }
-
-    /*public void isPressed(KeyCode kcode, double millis) 
-    {
-        /*Debug.Log("isPressed");
-        if (millis-time < cooldown && key == kcode && millis-time > 0) 
-        {
-            Debug.Log("Note was sucessfully hit");
-        } else if (millis-time < 0)
-        {
-            destroy(0);
-        }
-
-        if(kcode == key)
+        timeLeft -= Time.deltaTime;
+        if(timeLeft < - 0.2f)
         {
             Destroy(this.gameObject);
         }
-    }*/
+    }
 
     public void destroy(int acc)
     {

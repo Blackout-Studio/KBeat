@@ -309,27 +309,39 @@ MonoBehaviour:
   - bpm: 79
     clip: {fileID: 8300000, guid: 25e24f41cb51d4d4e9b945f1979a77ba, type: 3}
     name: Cradles
+    reactionTime: 0
     volume: 0.2
     pitch: 1
     source: {fileID: 0}
   - bpm: 107
     clip: {fileID: 8300000, guid: 9ba84a0f68a1342459b2e03f43f7aa13, type: 3}
     name: ComeOnEileen
+    reactionTime: 0
     volume: 0.2
     pitch: 1
     source: {fileID: 0}
   - bpm: 128
     clip: {fileID: 8300000, guid: 59531e48dc322450ca4af6723d4f991a, type: 3}
     name: HeroesTonight
+    reactionTime: 0
     volume: 0.2
     pitch: 1
     source: {fileID: 0}
   - bpm: 99
     clip: {fileID: 8300000, guid: 0a29c95972fb7439e870c38a9472cc50, type: 3}
     name: IWantItThatWay
+    reactionTime: 0
     volume: 0.034
     pitch: 1
     source: {fileID: 0}
+  - bpm: 240
+    clip: {fileID: 8300000, guid: f832eeebb2385064aa2cd36e776691b8, type: 3}
+    name: Los!Los!Los!
+    reactionTime: 4
+    volume: 0.005
+    pitch: 1
+    source: {fileID: 0}
+  song: 4
 --- !u!4 &758395158
 Transform:
   m_ObjectHideFlags: 0
@@ -388,6 +400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1e0868d050113744bd46615ff6eb336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kpEvent: {fileID: 0}
 --- !u!114 &791442992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -554,7 +567,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 30
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -579,13 +592,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0, y: 0.99735314, z: -0.07270999, w: 0}
-  m_LocalPosition: {x: 4.17, y: 0.628, z: 8.162}
+  m_LocalRotation: {x: -0, y: 0.998724, z: -0.05050204, w: 0}
+  m_LocalPosition: {x: 4.17, y: 1.33, z: 11.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 8.339, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 5.79, y: 180, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -871,7 +884,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5793205129648334581, guid: 811b56458a9e547cebe708b835fdb260, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6
+      value: -14.4
       objectReference: {fileID: 0}
     - target: {fileID: 5793205129648334581, guid: 811b56458a9e547cebe708b835fdb260, type: 3}
       propertyPath: m_LocalPosition.z
