@@ -8,6 +8,7 @@ public class Note : MonoBehaviour
     public double timeLeft;
     public KeyCode key;
     private float speed;
+    public KeyPressEvent KPE;
 
     public void Initialize(double timeToHit, KeyCode kcode, int reactionTime)
     {
@@ -22,6 +23,8 @@ public class Note : MonoBehaviour
         timeLeft -= Time.deltaTime;
         if(timeLeft < - 0.2f)
         {
+            // remove current combo
+           // KPE.currentCombo = 0;
             Destroy(this.gameObject);
         }
     }

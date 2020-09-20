@@ -9,7 +9,8 @@ public class KeyPressEvent : MonoBehaviour
     public List<Note> notes = new List<Note>();
     private GameObject noteObj;
 
-    private int combo = 20;
+    [HideInInspector]
+    public int currentCombo = 0;
     
     public ScoreManager scoreManager;
     public void keyPressed(KeyCode kcode)
@@ -25,7 +26,8 @@ public class KeyPressEvent : MonoBehaviour
                 {
                     Destroy(n.gameObject);
                     // adds score
-                    scoreManager.addScore(combo: combo);
+                    currentCombo += 1;
+                    scoreManager.addScore(combo: currentCombo);
                     
                     pressed = true;
                 }
