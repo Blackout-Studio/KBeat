@@ -22,6 +22,6 @@ public class ScoreDisplayer : MonoBehaviour
     void Update()
     {
         ScoreText.text = scoreManager.score.ToString();
-        Debug.Log(scoreManager.score);
+        
     }
 }
