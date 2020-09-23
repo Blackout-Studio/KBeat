@@ -552,7 +552,7 @@ MonoBehaviour:
     volume: 0.005
     pitch: 1
     source: {fileID: 0}
-  song: 1
+  song: 0
 --- !u!4 &758395158
 Transform:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class swipe_menu : MonoBehaviour
 {
@@ -9,16 +10,14 @@ public class swipe_menu : MonoBehaviour
     private float scroll_pos = 0;
     float[] pos;
 
-    // Start is called before the first frame update
-    void Start()
+    public void StartGame()
     {
-
+        SceneManager.LoadScene("GameplayScene");
     }
 
-    // Update is called once per frame
-    void Update()
+        void Update()
     {
-        pos = new float[transform.childCount];
+            pos = new float[transform.childCount];
         float distance = 1f / (pos.Length - 1f);
         for (int i = 0; i < pos.Length; i++)
         {
