@@ -552,8 +552,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 25e24f41cb51d4d4e9b945f1979a77ba, type: 3}
     name: Cradles
     length: 3.483
-    reactionTime: 1
-    volume: 0.2
+    reactionTime: 2
+    volume: 1
     pitch: 1
     source: {fileID: 0}
   - bpm: 107
@@ -561,7 +561,7 @@ MonoBehaviour:
     name: ComeOnEileen
     length: 4.783
     reactionTime: 2
-    volume: 0.2
+    volume: 1
     pitch: 1
     source: {fileID: 0}
   - bpm: 128
@@ -569,7 +569,7 @@ MonoBehaviour:
     name: HeroesTonight
     length: 3.466
     reactionTime: 2
-    volume: 0.2
+    volume: 1
     pitch: 1
     source: {fileID: 0}
   - bpm: 99
@@ -577,18 +577,18 @@ MonoBehaviour:
     name: IWantItThatWay
     length: 3.55
     reactionTime: 2
-    volume: 0.034
+    volume: 1
     pitch: 1
     source: {fileID: 0}
-  - bpm: 119
+  - bpm: 120
     clip: {fileID: 8300000, guid: f832eeebb2385064aa2cd36e776691b8, type: 3}
     name: Los!Los!Los!
     length: 3.616
-    reactionTime: 4
-    volume: 0.005
+    reactionTime: 2
+    volume: 1
     pitch: 1
     source: {fileID: 0}
-  song: 1
+  song: 0
 --- !u!4 &758395158
 Transform:
   m_ObjectHideFlags: 0
@@ -772,7 +772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1e0868d050113744bd46615ff6eb336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kpEvent: {fileID: 0}
+  kpEvent: {fileID: 294689490}
 --- !u!114 &791442992
 MonoBehaviour:
   m_ObjectHideFlags: 0
