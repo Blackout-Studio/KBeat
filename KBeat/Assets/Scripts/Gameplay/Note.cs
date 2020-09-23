@@ -10,7 +10,7 @@ public class Note : MonoBehaviour
     private float speed;
     public KeyPressEvent KPE;
 
-    public void Initialize(double timeToHit, KeyCode kcode, int reactionTime)
+    public void Initialize(double timeToHit, KeyCode kcode, int reactionTime, Sprite image)
     {
         this.timeLeft = timeToHit*reactionTime;
         this.key = kcode;

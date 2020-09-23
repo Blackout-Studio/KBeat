@@ -5,7 +5,8 @@ using UnityEngine;
 
 //Autor - Matyáš Himmer
 [System.Serializable]
-public class Song {
+public class Song : MonoBehaviour
+{
 
     public float bpm;
     public AudioClip clip;
