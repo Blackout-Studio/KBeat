@@ -35,10 +35,10 @@ public class BPMController : MonoBehaviour
         yield return new WaitForSeconds(3);
 
         amanager.Play(pickedSong.name);
-        Debug.Log(pickedSong.bpm * pickedSong.length);
+        
         
 
-        for (int i = 0; i <= pickedSong.bpm * pickedSong.length; i++)
+        for (int i = 0; i <= pickedSong.length; i++)
         {
             float randomNum = Random.Range( 0.0f,  10.0f);
 

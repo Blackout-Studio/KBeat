@@ -9,7 +9,6 @@ public class KeyPressEvent : MonoBehaviour
     public List<Note> notes = new List<Note>();
     private GameObject noteObj;
 
-    [HideInInspector]
     public int currentCombo = 0;
     
     public ScoreManager scoreManager;
